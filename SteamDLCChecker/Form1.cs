@@ -28,20 +28,22 @@ namespace SteamDLCChecker
 		Dictionary<string, List<AppInfo>> appDlcMap = new Dictionary<string, List<AppInfo>>();
 
 		private void Button1_Click(object sender, EventArgs e) {
-			UserData userData = JsonConvert.DeserializeObject<UserData>(userInfo.Text);
-			if (userData is null) {
-				return;
-			}
-
 			if (taskList is null) {
-				getAllDlcNotBuy = new GetAllDlcNotBuy(userData);
-				progressBar.Maximum = getAllDlcNotBuy.OwnedList.Count;
-				taskList = new Queue<string>();
-				foreach (var appid in getAllDlcNotBuy.OwnedList) {
-					taskList.Enqueue(appid);
+				UserData userData = JsonConvert.DeserializeObject<UserData>(userInfo.Text);
+				if (userData is null) {
+					return;
 				}
-				StartMainThread();
-				this.button1.Text = "暂停";
+				getAllDlcNotBuy = new GetAllDlcNotBuy(userData);
+				if (getAllDlcNotBuy.OwnedList.Count > 0) {
+					progressBar.Value = 0;
+					progressBar.Maximum = getAllDlcNotBuy.OwnedList.Count;
+					taskList = new Queue<string>();
+					foreach (var appid in getAllDlcNotBuy.OwnedList) {
+						taskList.Enqueue(appid);
+					}
+					StartMainThread();
+					this.button1.Text = "暂停";
+				}
 			}
 			else {
 				if (!isPause) { // Now doing
@@ -76,6 +78,7 @@ namespace SteamDLCChecker
 				taskList.Dequeue();
 				if (taskList.Count == 0) {
 					taskList = null;
+					this.button1.Text = "开始";
 				}
 			}
 		}
