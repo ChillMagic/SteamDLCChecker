@@ -16,9 +16,11 @@ namespace SteamDLCChecker
 		}
 
 		private void LinkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
-			RegistryKey key = Registry.ClassesRoot.OpenSubKey(@"http\shell\open\command\");
-			string s = key.GetValue("").ToString();
-			System.Diagnostics.Process.Start(s.Substring(0, s.Length - 8), "https://store.steampowered.com/dynamicstore/userdata");
+			System.Diagnostics.Process.Start("https://store.steampowered.com/dynamicstore/userdata");
+		}
+
+		private void LinkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
+			System.Diagnostics.Process.Start("https://github.com/ChillMagic/SteamDLCChecker/releases/latest");
 		}
 
 		Queue<string> taskList;

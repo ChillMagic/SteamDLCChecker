@@ -31,11 +31,14 @@
 			this.button1 = new System.Windows.Forms.Button();
 			this.appList = new System.Windows.Forms.ListBox();
 			this.dlcList = new System.Windows.Forms.ListBox();
+			this.linkLabel2 = new System.Windows.Forms.LinkLabel();
 			this.SuspendLayout();
 			// 
 			// userInfo
 			// 
 			this.userInfo.Location = new System.Drawing.Point(46, 64);
+			this.userInfo.MaxLength = 0;
+			this.userInfo.Multiline = true;
 			this.userInfo.Name = "userInfo";
 			this.userInfo.Size = new System.Drawing.Size(696, 25);
 			this.userInfo.TabIndex = 0;
@@ -89,11 +92,23 @@
 			this.dlcList.Size = new System.Drawing.Size(376, 184);
 			this.dlcList.TabIndex = 5;
 			// 
+			// linkLabel2
+			// 
+			this.linkLabel2.AutoSize = true;
+			this.linkLabel2.Location = new System.Drawing.Point(654, 488);
+			this.linkLabel2.Name = "linkLabel2";
+			this.linkLabel2.Size = new System.Drawing.Size(97, 15);
+			this.linkLabel2.TabIndex = 6;
+			this.linkLabel2.TabStop = true;
+			this.linkLabel2.Text = "获取最新地址";
+			this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel2_LinkClicked);
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 525);
+			this.Controls.Add(this.linkLabel2);
 			this.Controls.Add(this.dlcList);
 			this.Controls.Add(this.appList);
 			this.Controls.Add(this.button1);
@@ -103,7 +118,7 @@
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.MaximizeBox = false;
 			this.Name = "Form1";
-			this.Text = "Steam DLC 检漏 by Chill";
+			this.Text = "Steam DLC 检漏 2019.7.2.1 by Chill";
 			this.Load += new System.EventHandler(this.Form1_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();
@@ -118,6 +133,7 @@
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.ListBox appList;
 		private System.Windows.Forms.ListBox dlcList;
+		private System.Windows.Forms.LinkLabel linkLabel2;
 	}
 }
 
