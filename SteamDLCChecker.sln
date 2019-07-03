@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.29020.237
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SteamDLCChecker", "SteamDLCChecker\SteamDLCChecker.csproj", "{C5E6B1DC-0566-4E8C-9A66-19CDE4BEF803}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SteamInfo", "SteamInfo\SteamInfo.csproj", "{1DEB72D4-4322-4D01-A789-97D9D9333F1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{633A1624-E593-4E25-B668-FBF0DE53DAE5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{C5E6B1DC-0566-4E8C-9A66-19CDE4BEF803}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5E6B1DC-0566-4E8C-9A66-19CDE4BEF803}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5E6B1DC-0566-4E8C-9A66-19CDE4BEF803}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DEB72D4-4322-4D01-A789-97D9D9333F1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DEB72D4-4322-4D01-A789-97D9D9333F1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DEB72D4-4322-4D01-A789-97D9D9333F1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DEB72D4-4322-4D01-A789-97D9D9333F1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{633A1624-E593-4E25-B668-FBF0DE53DAE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{633A1624-E593-4E25-B668-FBF0DE53DAE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{633A1624-E593-4E25-B668-FBF0DE53DAE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{633A1624-E593-4E25-B668-FBF0DE53DAE5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

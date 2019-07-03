@@ -8,6 +8,7 @@ namespace SteamInfo
 		Game,
 		DLC,
 		Video,
+		Demo,
 	}
 	public class AppInfo
 	{
